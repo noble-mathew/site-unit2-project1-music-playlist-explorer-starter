@@ -99,14 +99,20 @@ h1 {
 }
 
 .playlist-title {
+    position: relative;
+    bottom: 20px;
     text-align: center;
 }
 
 .playlist-creator {
+    position: relative;
+    bottom: 10px;
     text-align: center;
 }
 
 .like-count {
+    position: relative;
+    bottom: 30px;
     display: flex;
     justify-content: center;
     margin-top: 32px;
@@ -140,26 +146,6 @@ h1 {
     -moz-transform: scale(1.2);
     -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
-}
-
-.first-playlist {
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-}
-
-.second-playlist {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-}
-
-.third-playlist {
-    grid-row: 1 / 2;
-    grid-column: 3 / 4;
-}
-
-.fourth-playlist {
-    grid-row: 1 / 2;
-    grid-column: 4 / 5;
 }
 
 #modal {
@@ -438,4 +424,153 @@ footer-text {
 .shuffle:hover {
     background-color: rgb(196, 157, 238);
     cursor: pointer;
+}
+
+.delete-playlist {
+    position: relative;
+    bottom: 195px;
+    left: 170px;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.delete-playlist:hover {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+
+.delete-song {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.edit-playlist {
+    position: relative;
+    display: hidden;
+    bottom: 195px;
+    left: 10px;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(0,0,0,.25);
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.edit-playlist:hover {
+    transform: scale(1.5);
+    opacity: 1;
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+
+#search {
+    margin-top: 20px;
+}
+
+#add-btn {
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+#add-btn:hover {
+    cursor: pointer;
+}
+
+.add-song-container {
+    background-color: rgb(72, 72, 72);
+    width: 70%;
+    margin: auto;
+    border-radius: 5%;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
+}
+
+.songs-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.delete-new-song {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    left: 2px;
+    top: 5px;
+}
+
+.add-song {
+    margin-bottom: 5px;
+}
+.add-header {
+    padding-top: 10px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.delete-new-song:hover {
+    cursor: pointer;
+}
+
+.add-song-btn {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.clear-search:hover {
+    cursor: pointer;
+}
+
+.search {
+    cursor: pointer;
+}
+
+main input {
+    background-color: #cccccc;
+}
+
+main button {
+    background-color: #cdcdcd;
+}
+
+.playlist-card .edit-playlist,
+.playlist-card .delete-playlist {
+    opacity: 0;
+}
+
+.playlist-card:hover .edit-playlist,
+.playlist-card:hover .delete-playlist {
+    opacity: 1;
 }

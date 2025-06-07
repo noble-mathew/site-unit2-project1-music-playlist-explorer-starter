@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Music Playlist Explorer</title>
+    <title>Playlists</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     
     <link rel="stylesheet" href="style.css">
@@ -12,16 +12,68 @@
 <body>
     <header>
         <!-- Your header content here -->
+        <h1>Music Playlist Explorer</h1>
+        <div class="view">
+            <h3><a href="index.html" class="active">Playlists</a></h3>
+            <h3><a href="featured.html">Featured</a></h3>
+        </div>
+        <div class="view">
+            <input type="input" id="search" placeholder="Search...">
+            <select name="sort" id="sort">
+                <option value="" selected disabled hidden>Sort</option>
+                <option value="alphabetical">A-Z</option>
+                <option value="likes-descending">Likes (Decreasing)</option>
+                <option value="date-recent">Date Added (most recent)</option>
+            </select>
+        </div>
+        <div class="view">
+            <button class="clear-search">Clear</button>
+            <button class="search">Search</button>
+        </div>
     </header>
 
     <main> 
-        <!-- Your main content here -->
-    </main>
+        <img src="/assets/img/add.png" id="add-btn">
+        <!-- Your main content here --> 
+        <div class="add-song-container hidden">
+            <div class="add-header">
+                <input class="add-album-cover" value="/assets/img/playlist.png">
+                <input class="add-album-name" value="Album Name">
+                <input class="add-album-creator" value="Album Creator">
+            </div>
+            <div class="songs-container">
+                
+            </div>
+            <div class="edit-playlist-btns">
+                <button class="add-song-btn">Add Song</button>
+                <button class="add-playlist-btn hidden">Add Playlist</button>
+                <button class="save-playlist-btn hidden">Save Playlist</button>
+            </div>
+        </div>
+        <section class="playlists">
+        
+        </section>
 
+        <!-- Modal Content-->
+        <div id="modal">
+            <div class="modal-overlay"></div>
+                <div class="modal-content">
+                    <div class="modal-playlist-header-container">
+
+                    </div>
+                    
+                    <div class="modal-songs-flex">
+
+                    </div>
+                    <p class="modal-close"><strong>&times;</strong></p>
+                </div>
+        </div>
     <footer>
+
         <!-- Your footer content here -->
+        <p class="footer-text">Noble Music &copy;2025</p>
     </footer>
-    <script src="data/data.js"></script>
-    <script src="script.js"></script>
+    <script src="playlists.js"></script>
+    <script src="playlistsScript.js"></script>
 </body>
 </html>
